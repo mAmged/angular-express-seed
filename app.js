@@ -7,7 +7,7 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   methodOverride = require('method-override'),
   errorHandler = require('error-handler'),
-  morgan = require('morgan'),
+  //morgan = require('morgan'),
   routes = require('./routes'),
   api = require('./routes/api'),
   http = require('http'),
@@ -24,7 +24,7 @@ var app = module.exports = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(bodyParser());
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
